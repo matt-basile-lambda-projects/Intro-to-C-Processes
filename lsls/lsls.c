@@ -23,10 +23,10 @@ int main(int argc, char **argv)
   }
   while( (ent=readdir(dir)) != NULL ){
     char *name = ent->d_name;
-    printf(">> %s\n", name);
+    printf(">> %s", name);
     // printf(">> %1llu\n", ent->d_ino);
     stat(name, &buf);
-    printf("file size is %lld\n", buf.st_size);
+    printf("  file size is %lld\n", buf.st_size);
   }
   
 
