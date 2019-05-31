@@ -54,10 +54,10 @@ int main(int argc, char **argv)
         // handling parsing the command line args
         parse_commandline(commandLine, args, &args_count);
 
-        for(int i = 0; i <args_count; i++){
-            printf("%s\n", args[i]);
-        }
-         printf("%d\n", args_count);
+        // for(int i = 0; i <args_count; i++){
+        //     printf("%s\n", args[i]);
+        // }
+        //  printf("%d\n", args_count);
         //  check if user didnt give any commands:
         if(args_count == 0){
             continue;
