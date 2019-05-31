@@ -75,10 +75,11 @@ int main(int argc, char **argv)
         }
         while( (ent=readdir(dir)) != NULL ){
           char *filename = ent->d_name;
-          printf(">> %s", filename);
-          // printf(">> %1llu\n", ent->d_ino);
           stat(filename, &buf);
-          printf("  file size is %lld\n", buf.st_size);
+          printf("%lld", buf.st_size);
+          printf("  %s\n", filename);
+          // printf(">> %1llu\n", ent->d_ino);
+          
         }
   }
 
